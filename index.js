@@ -1,17 +1,19 @@
 var componentPath = './jw-sites-commons/';
-var components = [
-  'footer'
-];
 
 function renderComponents(components) {
+  var componentDivs;
+
   if (!window.$) {
     console.log('Couldn\'t load components:', 'Including components requires JQuery.');
     return;
   }
 
-  components.forEach(function(name) {
-    $('[data-jw-component="' + name + '"]').load(componentPath + name + '/index.html');
+  $('div[data-jw-component]').each(function(el) {
+    var container = $(el);
+    var componentName = container.attr('data-jw-component');
+
+    container.load(componentPath + componentName + '/index.html')
   });
 }
 
-renderComponents(components);
+renderComponents();
