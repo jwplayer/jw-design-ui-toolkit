@@ -1,5 +1,3 @@
-var componentPath = './jw-sites-commons/';
-
 function renderComponents(components) {
   var componentDivs;
 
@@ -12,7 +10,7 @@ function renderComponents(components) {
     var container = $(el);
     var componentName = container.attr('data-jw-component');
 
-    container.load(componentPath + componentName + '/index.html')
+    container.load('/components/' + componentName + '/index.html')
   });
 }
 
