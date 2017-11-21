@@ -8,7 +8,7 @@ function renderComponents(components) {
     return;
   }
 
-  $('div[data-jw-component]').each(function(el) {
+  $('div[data-jw-component]').each(function(index, el) {
     var container = $(el);
     var componentName = container.attr('data-jw-component');
 
