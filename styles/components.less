@@ -1,0 +1,28 @@
+.pagination {
+
+    &.prev-next {
+        border-top: solid 1px mix(#000, #fff, 20%);
+        .clearfix;
+        margin-top: @sm-gutter;
+        padding-top: @sm-gutter / 2;
+        @media (min-width: @md-min) {
+            margin-top: @md-gutter;
+            padding-top: @md-gutter / 2;
+        }
+        @media (min-width: @lg-min) {
+            margin-top: @lg-gutter;
+            padding-top: @lg-gutter / 2;
+        }
+        span {
+            color: fade(#000, 20%);
+            line-height: 36px;
+        }
+        a, span {
+            float: left;
+            + a, + span {
+                float: right;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,57 @@
+.feature-item {
+
+  .icon {
+    img {
+      display: inline-block;
+      height: auto;
+      max-width: 80px;
+      width: 100%;
+    }
+  }
+
+  .icon + h4 {
+    margin-top: 20px;
+  }
+  .icon + p {
+    margin-top: 20px;
+  }
+  h4 + .icon {
+    margin-top: 15px;
+  }
+  h4 + p {
+    margin-top: 10px;
+  }
+
+  h4 {
+    color: @color-body-heading;
+    font-size: 16px;
+    font-weight: @karbon-semibold;
+    letter-spacing: @karbon-letter-spacing;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: @color-body-base;
+    // font-size: 16px;
+    line-height: 1.3;
+  }
+
+}
+
+.feature-item .button {
+  margin-top: 20px;
+}
+
+.feature-item > a:first-child {
+  display: block;
+  text-decoration: none; // TODO remove later?
+  h4 span {
+    border-bottom: solid 1px transparent;
+  }
+  &:hover {
+    text-decoration: none; // TODO remove later?
+    h4 span {
+      border-color: #000;
+    }
+  }
+}

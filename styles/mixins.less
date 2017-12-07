@@ -1,0 +1,41 @@
+/**
+ * Generate breakpoint-specific classes
+ * See `responsive.less` for usage
+ */
+.breakpoint-classes(@breakpoint, @counter: 1, @limit: @num-columns) when (@counter <= @limit) {
+  .@{breakpoint}-@{counter} {
+		width: percentage((@counter / @limit));
+	}
+	& when (@counter = @limit) {
+		// .@{breakpoint}-hide {
+		// 	display: none;
+		// }
+	}
+  .breakpoint-classes(@breakpoint, (@counter + 1));
+}
+
+/**
+ * Generate clear fix properties
+ * There are classes available in `layout.less`, but they call this mixin.
+ */
+.clear-fix() {
+  &:before, &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+#br-break() {
+  content: "\A";
+  display: inherit;
+  white-space: pre-line
+}
+
+#br-no-break() {
+  content: '';
+  display: inline;
+}

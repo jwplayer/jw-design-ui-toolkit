@@ -1,0 +1,213 @@
+.btn {
+    background-color: @primary-slate-gray;
+    border: none;
+    border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	font-family: @karbon;
+    font-size: 14px;
+    font-weight: @karbon-medium;
+    line-height: 16px;
+	margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+	vertical-align: middle;
+    width: auto;
+    &:focus {
+        color: #fff;
+    }
+    &:hover {
+        background-color: mix(@primary-slate-gray, #000, 90%);
+    }
+}
+
+.btn.lg {
+	font-size: 15px;
+	line-height: 20px;
+    padding: 10px 20px;
+}
+
+.btn.md {
+	font-size: 14px;
+	line-height: 16px;
+    padding: 10px 20px;
+}
+
+.btn.sm {
+	font-size: 13px;
+	line-height: 10px;
+    padding: 10px 15px;
+}
+
+.btn[class*="ico-"] {
+    background-position: right 20px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-right: 55px;
+}
+
+.btn-row {
+    font-size: 0;
+    .btn + .btn {
+        margin-left: 10px;
+    }
+    @media (min-width: @sm-min) {
+        .sm-block {
+            margin-left: 0;
+            display: block;
+            + .btn {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+        .sm-inline-block {
+            display: inline-block;
+            + .btn {
+                margin-left: 10px;
+                margin-top: 0;
+            }
+        }
+    }
+    @media (min-width: @md-min) {
+        .md-block {
+            margin-left: 0;
+            display: block;
+            + .btn {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+        .md-inline-block {
+            display: inline-block;
+            + .btn {
+                margin-left: 10px;
+                margin-top: 0;
+            }
+        }
+    }
+    @media (min-width: @lg-min) {
+        .lg-block {
+            margin-left: 0;
+            display: block;
+            + .btn {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+        .lg-inline-block {
+            display: inline-block;
+            + .btn {
+                margin-left: 10px;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.btn.default {
+    background-color: @primary-slate-gray;
+    &:hover {
+        background-color: mix(@primary-slate-gray, #000, 90%);
+    }
+}
+
+.btn.red {
+    background-color: @red;
+    &:hover {
+        background-color: @red-hover;
+    }
+}
+
+.btn[disabled],
+.btn.disabled {
+    background-color: @primary-gray;
+    color: @primary-slate-gray;
+    cursor: default;
+    &:hover {
+        background-color: @primary-gray;
+        color: @primary-slate-gray;
+    }
+}
+
+
+/* PRIMARY COLORS */
+
+.btn.blue { background-color: #0b7ef4;}
+.btn.gray { background-color: #aab4c8;}
+.btn.light-gray { background-color: #d9dde6;}
+.btn.charcoal { background-color: #252525;}
+.btn.white { background-color: #fff;}
+
+/* SECONDARY COLOR CLASSES */
+
+.btn.pink { background-color: #ff4664; }
+.btn.teal { background-color: #2bbecf; }
+.btn.dark-purple { background-color: #9000be;}
+.btn.purple { background-color: #7864ff;}
+.btn.orange { background-color: #ff9400;}
+.btn.yellow { background-color: #ffd700;}
+.btn.dark-green { background-color: #009b3c;}
+.btn.green { background-color: #00f096;}
+
+
+/* HOVER COLORS */
+
+.btn.blue:hover { background-color: #0f4e90; color: #fff; }
+.btn.gray:hover { background-color: #96a0b4; color: #fff; }
+.btn.charcoal:hover { background-color: #000; color: #fff;}
+.btn.white:hover { background-color: #eceef2; color: #000; }
+
+
+
+.btn-icon-sq {
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+	height: 35px;
+    width: 35px;
+}
+
+.btn-icon-rect {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+	height: 35px;
+    padding: 0 5px;
+	width: 35px;
+}
+
+.btn-set {
+	margin: 0 auto;
+    vertical-align: middle;
+}
+
+
+a.btn:hover {
+	text-decoration: none;
+}
+
+.primary-lg {
+	font-size: 15px;
+	line-height: 20px;
+    padding: 10px 20px;
+}
+
+.secondary-med {
+	font-size: 14px;
+	line-height: 16px;
+    padding: 10px 20px;
+}
+
+.tertiary-sm {
+	font-size: 13px;
+	line-height: 10px;
+    padding: 10px 15px;
+}
+
+.inactive {
+	border: solid 2px rgba(170, 180, 200, .5);
+	color: rgba(170, 180, 200, .5);
+	padding: 8px 15px;
+}

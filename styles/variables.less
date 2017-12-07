@@ -1,0 +1,145 @@
+/**
+ * Path of Karbon font on AWS S3
+ */
+@cdn-path-fonts: 'https://icons.jwplayer.com/karbon';
+
+/**
+ * Font stacks we use (other than Karbon)
+ * See `karbon.less` for `@font-face` definitions
+ */
+@arial: Arial, sans-serif;
+@karbon: Karbon, Arial, sans-serif;
+@code: Monaco, 'Lucida Sans Typewriter', Consolas, 'Lucida Console', 'Courier New', monospace;
+
+/**
+ * Font sizes
+ */
+@font-size-base: 16px;
+
+/**
+ * Font weights for fonts we use
+ * Prevent need to memorize
+ */
+@karbon-light: 200;
+@karbon-regular: 300;
+@karbon-medium: 400;
+@karbon-semibold: 500;
+@karbon-bold: 600;
+
+/**
+ * Letter spacing for Karbon font
+ */
+@karbon-letter-spacing: 0.5px;
+
+/**
+ * Responsive layout breakpoints
+ * These are very general breakpoints. It is preferred that specific breakpoints
+ * are defined when building (especially unique) elements because the best
+ * responsive layouts have specific breakpoint behavior. The extra effort is
+ * worthwhile.
+ */
+@sm-min: 0px;
+@md-min: 480px;
+@lg-min: 960px;
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+@lg-max: 100%;
+
+/**
+ * Number of column sizes produced by our mixin
+ * See `mixins.less` and look for `.breakpoint-classes()`
+ */
+@num-columns: 12;
+
+/** Maximum width of a container element. This prevents incredibly wide layouts
+ * on larger viewports.
+ */
+@max-width: 1400px;
+
+/**
+ * Whitespace size of margin/padding per breakpoint
+ * It's preffered that you be strict when using these, as they are meant only
+ * to provide margin/padding consistency between columns, rows, sections, and
+ * other forms of block/component elements. For example, vertical space between
+ * two lines of text should be defined based on what is visually pleasing and
+ * not using these gutter values. If these values were to change, it could
+ * comprimise page elements that were not meant to be part of the change.
+ */
+@sm-gutter: 20px;
+@md-gutter: 30px;
+@lg-gutter: 40px;
+
+/**
+ * Brand primary colors
+ */
+@color-brand-1: #FF0046; // red
+@color-brand-2: #0B7EF4; // blue
+
+/**
+ * Body text
+ */
+@color-body-heading: #000;
+@color-body-base: fade(#000, 80%);
+@color-body-invert-heading: #fff;
+@color-body-invert-base: fade(#fff, 80%);
+
+/**
+ * Input text
+ */
+@color-input-base: fade(#000, 80%);
+@color-input-placeholder: fade(#000, 40%);
+
+/**
+ * Brand alternative colors
+ */
+@color-alt-1: #FF4664; // crimson
+@color-alt-2: #2BBECF; // turquoise
+@color-alt-3: #9000BE; // purple
+@color-alt-4: #7864FF; // slate blue
+@color-alt-5: #FF9400; // orange
+@color-alt-6: #ffb600; // gold
+@color-alt-7: #009B3C; // green
+@color-alt-8: #00F096; // spring green
+
+/**
+* Brand general UI colors
+*/
+@color-black-1: #000; // black
+@color-black-2: #252525; // dark gray (almost black)
+@color-gray-1: #475470; // dark blue-ish gray
+@color-gray-2: #AAB4C8; // medium blue-ish gray
+@color-gray-3: #D9DDE6; // light blue-ish gray
+
+/* ===== TESTING ===== */
+
+/* ===== IMPROVE ===== */
+
+/* ===== DEPRECATE ===== */
+
+// color naming convention according to:
+// https://www.codeavengers.com/image/notes/color-table.jpg
+@primary-black: #252525;
+@primary-red: #FF0046;
+@primary-blue: #0B7EF4;
+@primary-dark-gray: #475470;
+@primary-slate-gray: #AAB4C8;
+@primary-gray: #D9DDE6;
+//
+@secondary-crimson: #FF4664;
+@secondary-turquoise: #2BBECF;
+@secondary-purple: #9000BE;
+@secondary-slate-blue: #7864FF;
+@secondary-orange: #FF9400;
+@secondary-gold: #ffb600;
+@secondary-green: #009B3C;
+@secondary-spring-green: #00F096;
+//
+@primary-3: #0B7EF4;
+@primary-3-hover: #0f4e90;
+@primary-3-alt: #0f4e90;
+/* v2 */
+@black: #252525;
+@red: #FF0046;
+@red-hover: #97052d;
+@blue: #0B7EF4;
+@blue-hover: #0f4e90;
