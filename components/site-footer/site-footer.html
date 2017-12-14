@@ -3,25 +3,25 @@
   <div class="global-site-footer-container">
     <ul class="global-site-footer-row">
       <li>
-        <a href="//www.jwplayer.com">
+        <a {%if include.selected == 'developer' %}class="selected"{% endif %} href="//www.jwplayer.com">
           <strong>JW Player</strong>
           <span>Browse our products, company,<br> resources, and pricing</span>
         </a>
       </li>
       <li>
-        <a href="//dashboard.jwplayer.com">
+        <a {%if include.selected == 'dashboard' %}class="selected"{% endif %} href="//dashboard.jwplayer.com">
           <strong>Dashboard</strong>
           <span>Content, players, analytics,<br> and account management</span>
         </a>
       </li>
       <li>
-        <a class="selected" href="//developer.jwplayer.com">
+        <a {%if include.selected == 'developer' %}class="selected"{% endif %} href="//developer.jwplayer.com">
           <strong>Developer</strong>
           <span>Join the community, demos,<br> references, dev guides, and tools.</span>
         </a>
       </li>
       <li>
-        <a href="//support.jwplayer.com">
+        <a {%if include.selected == 'support' %}class="selected"{% endif %} href="//support.jwplayer.com">
           <strong>Support</strong>
           <span>Search the articles, ask the<br> community, or give feedback</span>
         </a>
