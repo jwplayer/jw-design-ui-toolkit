@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-  color: @color-body-base;
+  color: @black-transparent-80;
   font-family: @karbon;
   font-size: @font-size-base;
   font-weight: @karbon-regular;
@@ -48,29 +48,29 @@ p, ul, ol, figure, blockquote, form {
 input,
 select,
 textarea {
-  color: @color-input-base;
+  color: @black-transparent-80;
   &[type="search"] {
     box-sizing: border-box;
   }
   &:focus {
-    color: #000;
+    color: @black;
   }
   &::-webkit-input-placeholder {
-    color: @color-input-placeholder;
+    color: @black-transparent-20;
   }
   &:-moz-placeholder {
-   color: @color-input-placeholder;
+   color: @black-transparent-20;
    opacity: 1;
   }
   &::-moz-placeholder {
-    color: @color-input-placeholder;
+    color: @black-transparent-20;
     opacity: 1;
   }
   &:-ms-input-placeholder {
-    color: @color-input-placeholder;
+    color: @black-transparent-20;
   }
   &:placeholder-shown {
-    color: @color-input-placeholder;
+    color: @black-transparent-20;
   }
 }
 
@@ -111,7 +111,7 @@ strong {
 }
 
 a {
-  color: @primary-blue;
+  color: @jw-blue;
   font-weight: @karbon-medium;
   text-decoration: none;
   &:hover {
