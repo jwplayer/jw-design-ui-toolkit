@@ -1,0 +1,26 @@
+{
+  "name": "jw-sites-commons",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwplayer/jw-sites-commons.git"
+  },
+  "author": "Joshua Hatcher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwplayer/jw-sites-commons/issues"
+  },
+  "homepage": "https://github.com/jwplayer/jw-sites-commons#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-jekyll": "^0.4.6",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
