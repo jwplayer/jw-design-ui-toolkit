@@ -23,7 +23,7 @@ module.exports = function(grunt) {
   };
 
   config.copy = {
-    tmp: {
+    main: {
       files: [
         {
           cwd: 'src/',
@@ -39,6 +39,15 @@ module.exports = function(grunt) {
           flatten: true
         }
       ]
+    }
+  };
+
+  config.jekyll = {
+    dist: {
+      options: {
+        src: 'tmp',
+        dest: 'build'
+      },
     }
   };
 
@@ -61,7 +70,7 @@ module.exports = function(grunt) {
   }
 
   config.less = {
-    build: {
+    dist: {
       files: {
         'build/style.css': [
           '../styles/build.less',
@@ -71,15 +80,6 @@ module.exports = function(grunt) {
       }
     }
   }
-
-  config.jekyll = {
-    build: {
-      options: {
-        src: 'tmp',
-        dest: 'build'
-      },
-    }
-  };
 
   config.watch = {
     files: [ 'src/**/*', '../components/**/*' ],
@@ -97,11 +97,11 @@ module.exports = function(grunt) {
   grunt.registerTask('default', '', function() {
     grunt.task.run([
       'clean:build',
-      'copy:tmp',
-      'jekyll:build',
+      'copy',
+      'jekyll',
       'concat',
       'uglify',
-      'less:build',
+      'less',
       'clean:tmp'
     ]);
   });
