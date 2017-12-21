@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       files: [
         {
           cwd: 'src/',
-          src: 'index.html',
+          src: [ '**/*', '!*.less' ],
           dest: 'tmp/',
           expand: true
         },
@@ -42,6 +42,36 @@ module.exports = function(grunt) {
     }
   };
 
+  config.concat = {
+    dist: {
+      src: [
+        'node_modules/jquery/dist/jquery.slim.min.js',
+        '../components/**/*.js'
+      ],
+      dest: 'tmp/main.js'
+    }
+  };
+
+  config.uglify = {
+    scripts: {
+      files: {
+        'build/main.min.js': [ 'tmp/main.js' ]
+      }
+    }
+  }
+
+  config.less = {
+    build: {
+      files: {
+        'build/style.css': [
+          '../styles/build.less',
+          '../components/components.less',
+          'src/demo.less'
+        ]
+      }
+    }
+  }
+
   config.jekyll = {
     build: {
       options: {
@@ -49,15 +79,29 @@ module.exports = function(grunt) {
         dest: 'build'
       },
     }
-  }
+  };
+
+  config.watch = {
+    files: [ 'src/**/*', '../components/**/*' ],
+    tasks: [ 'default' ],
+    options: {
+      atBegin: true,
+      spawn: false
+    }
+  };
 
   grunt.initConfig(config);
+
   grunt.registerTask('server', [ 'connect:server' ]);
+
   grunt.registerTask('default', '', function() {
     grunt.task.run([
       'clean:build',
       'copy:tmp',
       'jekyll:build',
+      'concat',
+      'uglify',
+      'less:build',
       'clean:tmp'
     ]);
   });
