@@ -10,6 +10,7 @@ git submodule add git@github.com:jwplayer/jw-sites-commons.git
 
 You should now see a folder called *jw-sites-commons* within your project. You can now reference these files like you would any other file in your project.
 
+
 ## Update the submodule
 If the commons code has been changed, you'll need to update the commons submodule in each project that contains it. This manual step ensures that none of our varied builds will break when a global update is pushed.
 
@@ -34,8 +35,10 @@ Or to import all the global styles at once, use:
 @import 'path/to/jw-sites-commons/components/components.less'
 ```
 
+
 ### Including HTML Content
 You can refer to the HTML templates for the components with `{% include template.html %}`, where "template" is the filename of the template you want to pull in.
+
 
 ### Update Grunt to Reference HTML Includes
 If you're using Grunt, you'll need to port your HTML through the `temp` folder and into your compiled `dist` or `build` directory to avoid Grunt failures.
