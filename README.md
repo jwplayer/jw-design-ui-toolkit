@@ -8,7 +8,7 @@ Navigate to the root of your project and run the following command:
 git submodule add git@github.com:jwplayer/jw-sites-commons.git
 ```
 
-You should now see a folder called *jw-sites-commons* within your project. You can now reference these files like you would any other file in your project.
+You should now see a folder called _jw-sites-commons_ within your project. You can now reference these files like you would any other file in your project.
 
 
 ## Update the Submodule
@@ -25,15 +25,9 @@ You should now have the most updated version of the commons repo within your pro
 ## Reference the Submodule
 
 ### Including CSS/LESS
-For styles from a single component, import the file in your main LESS file via a relative path as you normally would:
-
+Reference all the global styles in your main.less file:
 ```
-@import 'path/to/jw-sites-commons/components/site-header/style.less'
-```
-
-Or to import all the global styles at once, use:
-```
-@import 'path/to/jw-sites-commons/components/components.less'
+@import 'path/to/jw-sites-commons/styles/build.less'
 ```
 
 
@@ -42,7 +36,7 @@ You can refer to the HTML templates for the components with `{% include template
 
 
 ### Updating Grunt
-If you're using Grunt, you'll need to port your HTML through the `temp` folder and into your compiled `dist` or `build` directory to avoid Grunt failures.
+If you're using Grunt, you'll need to port your HTML through the `tmp` folder and into your compiled `dist` or `build` directory to avoid Grunt failures.
 
 In the files array for your `copy` task, add the following object:
 
