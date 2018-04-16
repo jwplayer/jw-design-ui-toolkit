@@ -55,7 +55,8 @@ module.exports = function(grunt) {
     dist: {
       src: [
         'node_modules/jquery/dist/jquery.slim.min.js',
-        '../components/**/*.js'
+        '../components/**/*.js',
+        '../components/components.js'
       ],
       dest: 'tmp/main.js'
     }
