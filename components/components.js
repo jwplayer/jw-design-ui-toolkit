@@ -25,6 +25,6 @@ function handleSecondaryHeader() {
   });
 }
 
-$.getJSON( "../commons-config.json", function( data ) {
-  console.log(data);
-});
+// $.getJSON( "../commons-config.json", function( data ) {
+//   console.log(data);
+// });
