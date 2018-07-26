@@ -1,2 +1,163 @@
-@import 'v2';
-@import 'deprecating';
+/* ===== overaching classes ===== */
+.button {
+    background-color: @jw-slate;
+    border: none;
+    border-radius: 3px;
+      color: #fff;
+    cursor: pointer;
+      display: inline-block;
+      font-family: @karbon;
+    font-size: 13px;
+    font-weight: @karbon-semibold;
+    letter-spacing: @karbon-letter-spacing;
+    line-height: normal;
+      margin: 0 auto;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 150ms ease;
+    user-select: none;
+      vertical-align: middle;
+    width: auto;
+  
+    &:focus {
+      color: #fff;
+    }
+  
+    &:hover {
+      background-color: mix(@jw-slate, #000, 90%);
+      text-decoration: none;
+    }
+  
+  }
+
+.btn {
+    background-color: @jw-slate;
+    border: none;
+    border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	font-family: @karbon;
+    font-size: 14px;
+    font-weight: @karbon-medium;
+    line-height: 16px;
+	margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+	vertical-align: middle;
+    width: auto;
+    &:focus {
+        color: #fff;
+    }
+    &:hover {
+        background-color: mix(@jw-slate, #000, 90%);
+    }
+}
+
+  /* ===== button container ===== */
+
+.btn-set {
+	margin: 0 auto;
+    vertical-align: middle;
+}
+
+  /* ===== colors ===== */
+
+.btn.red {
+    background-color: @jw-red;
+    &:hover {
+        background-color: @jw-scarlet;
+    }
+}
+
+.btn.blue { 
+    background-color: #0b7ef4;
+    &:hover {
+        background-color: #0f4e90; color: #fff; 
+    }
+}
+
+.btn.default {
+    background-color: @jw-slate;
+    &:hover {
+        background-color: mix(@jw-slate, #000, 90%);
+    }
+}
+
+  
+  /* ===== sizes ===== */
+  
+  .button-lg {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  
+  .button-md {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  
+  .button-sm {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+
+  .btn.lg {
+	font-size: 15px;
+	line-height: 20px;
+    padding: 10px 20px;
+  }
+
+  .btn.md {
+	font-size: 14px;
+	line-height: 16px;
+    padding: 10px 20px;
+  }
+
+  .btn.sm {
+	font-size: 13px;
+	line-height: 10px;
+    padding: 10px 15px;
+  }
+  
+  /* ===== themes ===== */
+
+  .button-theme-brand-1 {
+    background-color: @jw-red;
+    &:hover {
+      background-color: mix(@jw-red, #000, 90%);
+    }
+  }
+  
+  .button-theme-brand-2 {
+    background-color: @jw-blue;
+    &:hover {
+      background-color: mix(@jw-blue, #000, 90%);
+    }
+  }
+  
+  /* ===== states ===== */
+  
+  .button[disabled],
+  .button-disabled {
+    background-color: @jw-gray;
+    color: @jw-slate;
+    cursor: default;
+    &:hover {
+      background-color: @jw-gray;
+      color: @jw-slate;
+    }
+  }
+
+  a.btn:hover {
+	text-decoration: none;
+  }
+
+  .inactive {
+	border: solid 2px rgba(170, 180, 200, .5);
+	color: rgba(170, 180, 200, .5);
+	padding: 8px 15px;
+  }
