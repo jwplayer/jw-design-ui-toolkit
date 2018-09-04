@@ -1,3 +1,85 @@
+/**
+ * Responsive layout breakpoints
+ * These are very general breakpoints. It is preferred that specific breakpoints
+ * are defined when building (especially unique) elements because the best
+ * responsive layouts have specific breakpoint behavior. The extra effort is
+ * worthwhile.
+ */
+@sm-min: 0px;
+@md-min: 480px;
+@lg-min: 960px;
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+@lg-max: 100%;
+
+/**
+ * Number of column sizes produced by our mixin
+ * See `mixins.less` and look for `.breakpoint-classes()`
+ */
+@num-columns: 12;
+
+/** Maximum width of a container element. This prevents incredibly wide layouts
+ * on larger viewports.
+ */
+@max-width: 1400px;
+
+/**
+ * Whitespace size of margin/padding per breakpoint
+ * It's preffered that you be strict when using these, as they are meant only
+ * to provide margin/padding consistency between columns, rows, sections, and
+ * other forms of block/component elements. For example, vertical space between
+ * two lines of text should be defined based on what is visually pleasing and
+ * not using these gutter values. If these values were to change, it could
+ * comprimise page elements that were not meant to be part of the change.
+ */
+@sm-gutter: 20px;
+@md-gutter: 30px;
+@lg-gutter: 40px;
+
+
+/**
+ * Generate breakpoint-specific classes
+ * See `responsive.less` for usage
+ */
+.breakpoint-classes(@breakpoint, @counter: 1, @limit: @num-columns) when (@counter <= @limit) {
+  .@{breakpoint}-@{counter} {
+		width: percentage((@counter / @limit));
+	}
+	& when (@counter = @limit) {
+		// .@{breakpoint}-hide {
+		// 	display: none;
+		// }
+	}
+  .breakpoint-classes(@breakpoint, (@counter + 1));
+}
+
+/**
+ * Generate clear fix properties
+ * There are classes available in `layout.less`, but they call this mixin.
+ */
+.clear-fix() {
+  &:before, &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+#br-break() {
+  content: "\A";
+  display: inherit;
+  white-space: pre-line
+}
+
+#br-no-break() {
+  content: '';
+  display: inline;
+}
+
+
 @media (min-width: @sm-min) {
 	.breakpoint-classes(sm);
 }
