@@ -1,4 +1,4 @@
-# JW Player Sites Commons (Hook)
+# JW Design System (Hook)
 
 This repository contains HTML and LESS/CSS that are used globally across JW Player sites. This helps us maintain design consistency by pulling from a single source.
 
