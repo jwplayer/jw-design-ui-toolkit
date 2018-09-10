@@ -5,7 +5,7 @@ This repository contains HTML and LESS/CSS that are used globally across JW Play
 ## Add the Submodule
 Navigate to the root of your project and run the following command:
 ```
-git submodule add git@github.com:jwplayer/jw-sites-commons.git
+git submodule add git@github.com:jwplayer/jw-design-system.git
 ```
 
 You should now see a folder called _jw-sites-commons_ within your project. You can now reference these files like you would any other file in your project.
@@ -27,7 +27,7 @@ You should now have the most updated version of the commons repo within your pro
 ### Including CSS/LESS
 Reference all the global styles in your main.less file:
 ```
-@import 'path/to/jw-sites-commons/styles/build.less'
+@import 'path/to/jw-design-system/styles/build.less'
 ```
 
 
@@ -42,7 +42,7 @@ In the files array for your `copy` task, add the following object:
 
 ```
 {
-  cwd: 'jw-sites-commons/components',
+  cwd: 'jw-design-system/components',
   src: '**/*.html',
   dest: 'tmp/path/to/html/files/_includes',
   expand: true,
