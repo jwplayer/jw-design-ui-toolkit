@@ -34,8 +34,8 @@ To include global LESS (to be compiled & minified alongside your own), import it
 @import 'path/to/jw-design-system/styles/build.less'
 ```
 -or-
-##### 2. Include Pre-Minified CSS in document <head>
-This project contains a Grunt file that builds all LESS into a single, minified CSS file called `hook.min.css`. Access this standalone stylesheet from HTML as follows:
+##### 2. Include Pre-Minified CSS Stylesheet
+This project contains a Grunt file that builds all LESS into a single, minified CSS file called `hook.min.css`. Reference the standalone stylesheet in the document head as follows:
 ```
 <link rel="stylesheet" type="text/css" href="./jw-design-system/styles/hook.min.css">
 ```
@@ -46,20 +46,20 @@ To update code within Hook, navigate to the root of this project and run:
 npm install
 grunt
 ```
-This will watch all files for changes as you develop and update the minified CSS file.
+This will watch all LESS for changes as you develop and update the minified CSS file.
 
 ### Preview Mode
-Here you can preview any UI changes made to the global components. Preview mode will watch everything in the `components` and `styles` folders and rebuild as you make changes, but it **_does not hot reload_** the browswer and will require a page refresh.
+Here you can preview any UI changes made to the global components. Preview mode will watch everything in the `components` and `styles` folders and rebuild as you make changes, but it **_does not hot reload_** the browser and will require a page refresh.
 
-##### Running Preview:
+#### Running Preview:
 Navigate to the `preview` directory and run:
 ```
 npm install
 ```
-Now run the following two commands simultaneously to open a preview at `localhost:4000`:
+Now run the following two commands simultaneously to run a server at [localhost:4000](localhost:4000):
 ```
 grunt watch
 grunt server
 ```
-##### Adding Components to Preview:
-Preview mode contains a JSON file that pulls from each component. If you add a new item to the `components` folder, add it to the title and file name in `src/_data/components.json` to view it in the preview context.
+#### Adding Components to Preview:
+Preview mode contains a JSON file that pulls from each component. If you add a new item to the `components` folder, add its title and file name in `src/_data/components.json` to view it in the preview context.
