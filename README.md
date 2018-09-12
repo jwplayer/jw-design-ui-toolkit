@@ -56,7 +56,7 @@ Navigate to the `preview` directory and run:
 ```
 npm install
 ```
-Now run the following two commands simultaneously to run a server at [localhost:4000](localhost:4000):
+Now run the following two commands simultaneously to run a server at [localhost:4000](//localhost:4000/):
 ```
 grunt watch
 grunt server
