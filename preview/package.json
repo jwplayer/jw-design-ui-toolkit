@@ -1,5 +1,5 @@
 {
-  "name": "jw-sites-commons",
+  "name": "jw-design-system",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jwplayer/jw-sites-commons.git"
+    "url": "git+https://github.com/jwplayer/jw-design-system.git"
   },
-  "author": "Joshua Hatcher",
+  "author": "JW Player",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jwplayer/jw-sites-commons/issues"
+    "url": "https://github.com/jwplayer/jw-design-system/issues"
   },
-  "homepage": "https://github.com/jwplayer/jw-sites-commons#readme",
+  "homepage": "https://github.com/jwplayer/jw-design-system#readme",
   "dependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.1.0",

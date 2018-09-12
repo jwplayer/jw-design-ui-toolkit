@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JW Sites Commons Demo</title>
+  <title>Hook Preview Mode</title>
+  <link rel="icon" type="image/png" href="./favicon.png" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -13,9 +14,8 @@
   {% include site-secondary-header.html product="player" %}
   <div class="product-hero">
     <div class="product-hero-container">
-      <h1>JW Sites Commons Demo</h1>
-      <p>This demo can be used to preview and test out common components in the context of a real page. You can develop your changes to a component alongside this page to ensure that it looks and functions as expected before integrating them to a live site.</p>
-      <p>To preview a specific standalone component outside of the context of this page, select it from the list below.</p>
+      <h1>Hook Preview Mode</h1>
+      <p>Here you can test UI changes on the site headers, footer, and any new components before updating them on a live site. To isolate a specific component outside of the context of this page, select it from the list below.</p>
       <ul>
         {% for component in site.data.components %}
         <li>
