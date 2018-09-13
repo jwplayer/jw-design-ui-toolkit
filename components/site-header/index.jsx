@@ -4,13 +4,11 @@ export default class SiteHeader extends Component {
 
   state = {
     menu: false,
-    site: this.props.site;
+    site: this.props.site
   }
 
   toggleMenu() {
-    this.setState({
-      menu: !this.state.menu
-    })
+    this.setState({ menu: !this.state.menu })
   }
 
   render() {
