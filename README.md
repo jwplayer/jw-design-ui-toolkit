@@ -1,53 +1,65 @@
 # JW Design System (Hook)
 
-This repository contains HTML and LESS/CSS that are used globally across JW Player sites. This helps us maintain design consistency by pulling from a single source.
+This repository contains a single source of truth for global styles and components used across JW Player sites & products. It's maintained here and included in other projects as a [git submodule](https://git-scm.com/docs/git-submodule).
 
-## Add the Submodule
+## Using Hook in Your Project:
+
+### Installing the Submodule
 Navigate to the root of your project and run the following command:
 ```
 git submodule add git@github.com:jwplayer/jw-design-system.git
 ```
+You should now see a folder called **_jw-design-system_** in your file structure. Reference the files like any other directory in your project.
 
-You should now see a folder called _jw-sites-commons_ within your project. You can now reference these files like you would any other file in your project.
+**Note:** This command may throw an error if the submodule already exists. If you encounter this error, run the following commands to remove old instances of the submodule:
+```
+git submodule deinit -f -- jw-design-system
+rm -rf .git/modules/jw-design-system
+git rm -rf jw-design-system
+```
+Then add the submodule as documented above.
 
-
-## Update the Submodule
-If the commons code has been changed, you'll need to update the commons submodule in each project that contains it. This manual step ensures that none of our varied builds will break when a global update is pushed.
-
-From the root of your project, run:
+### Updating the Submodule
+Because **_jw-design-system_** is subject to new updates, it's a best practice to update your project's version of the submodule often. To ensure you're using the most recent version, run:
 ```
 git submodule update --remote --merge
 ```
 
-You should now have the most updated version of the commons repo within your project.
+### Including Styles
+Hook styles can be included in two ways:
 
-
-## Reference the Submodule
-
-### Including CSS/LESS
-Reference all the global styles in your main.less file:
+##### 1. Pull LESS into Build Process
+To include global LESS (to be compiled & minified alongside your own), import it into your own LESS file as follows:
 ```
 @import 'path/to/jw-design-system/styles/build.less'
 ```
-
-
-### Including HTML Content
-You can refer to the HTML templates for the components with `{% include template.html %}`, where "template" is the filename of the template you want to pull in.
-
-
-### Updating Grunt
-If you're using Grunt, you'll need to port your HTML through the `tmp` folder and into your compiled `dist` or `build` directory to avoid Grunt failures.
-
-In the files array for your `copy` task, add the following object:
-
+-or-
+##### 2. Include Pre-Minified CSS Stylesheet
+This project contains a Grunt file that builds all LESS into a single, minified CSS file called `hook.min.css`. Reference the standalone stylesheet in the document head as follows:
 ```
-{
-  cwd: 'jw-design-system/components',
-  src: '**/*.html',
-  dest: 'tmp/path/to/html/files/_includes',
-  expand: true,
-  flatten: true
-}
+<link rel="stylesheet" type="text/css" href="./jw-design-system/styles/hook.min.css">
 ```
 
-More detailed steps can be found [here](https://docs.google.com/document/d/1FqhNp7H6_kE5buhEAPISssWEyQqqyzQItERsSmwOPzM/).
+## Updating Hook Styles & Components
+To update code within Hook, navigate to the root of this project and run:
+```
+npm install
+grunt
+```
+This will watch all LESS for changes as you develop and update the minified CSS file.
+
+### Preview Mode
+Here you can preview any UI changes made to the global components. Preview mode will watch everything in the `components` and `styles` folders and rebuild as you make changes, but it **_does not hot reload_** the browser and will require a page refresh.
+
+#### Running Preview:
+Navigate to the `preview` directory and run:
+```
+npm install
+```
+Now run the following two commands simultaneously to run a server at [localhost:4000](//localhost:4000/):
+```
+grunt watch
+grunt server
+```
+#### Adding Components to Preview:
+Preview mode contains a JSON file that pulls from each component. If you add a new item to the `components` folder, add its title and file name in `src/_data/components.json` to view it in the preview context.

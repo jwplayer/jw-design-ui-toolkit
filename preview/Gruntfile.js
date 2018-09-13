@@ -76,7 +76,7 @@ module.exports = function(grunt) {
         'build/style.css': [
           '../styles/build.less',
           '../components/components.less',
-          'src/demo.less'
+          'src/preview.less'
         ]
       }
     }

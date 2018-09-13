@@ -1,3 +1,6 @@
+// this file should be included to handle the static versions of Components
+// does not apply to jsx/React files
+
 function handleMenuToggle() {
   var menuToggle = document.querySelector('.menu-toggle');
   menuToggle.addEventListener('click', function() {
