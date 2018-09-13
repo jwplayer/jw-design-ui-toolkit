@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 export default class SiteHeader extends Component {
 
   state = {
-    menu: false
+    menu: false,
+    site: this.props.site;
   }
 
   toggleMenu() {
@@ -13,14 +14,14 @@ export default class SiteHeader extends Component {
   }
 
   render() {
-    const { menu } = this.state;
+    const { menu, site } = this.state;
     return (
-      <div className="site-header support">
+      <div className={`site-header ${site}`}>
         <div className="site-header-container">
           <a className="logo" href="/">
             <img src="//developer.jwplayer.com/img/jw-logo-mark-white.svg" alt="JW Player Swoosh" />
             <img src="//developer.jwplayer.com/img/jw-logo-text-white.svg" alt="Jw Player Logo" />
-            <span className="logo-developer">Developer</span>
+            <span className={`logo-${site}`}>{site}</span>
           </a>
           <a className={`menu-toggle ${menu ? 'on' : ''}`} onClick={() => this.toggleMenu()}>Menu</a>
           <ul className={`menu ${menu ? 'show' : ''}`}>

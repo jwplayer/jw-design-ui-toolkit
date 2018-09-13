@@ -16,7 +16,7 @@ module.exports = function (grunt) {
   config.less = {
     build: {
       files: {
-        'styles/hook.css' : 'styles/build.less'
+        'styles/hook.css' : 'styles/hook.less'
       }
     }
   };
