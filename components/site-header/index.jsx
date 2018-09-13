@@ -26,7 +26,12 @@ export default class SiteHeader extends Component {
             <li><a className="link" href="https://www.jwplayer.com/careers">Careers</a></li>
             <li><a className="link" href="https://www.jwplayer.com">Company</a></li>
             <li><a className="link" href="https://medium.com/jw-player-engineering">Blog</a></li>
-            <li><a className="link" href="https://support.jwplayer.com">Support</a></li>
+            { site === 'developer' &&
+              <li><a className="link" href="https://support.jwplayer.com">Support</a></li>
+            }
+            { site === 'support' &&
+              <li><a className="link" href="https://developer.jwplayer.com">Developer</a></li>
+            }
             <li><a className="link" href="https://dashboard.jwplayer.com">Sign-In</a></li>
             <li><a className="btn md red" href="https://www.jwplayer.com/pricing/?utm_source=support&utm_medium=CTA&utm_campaign=Developer%20Nav%20Upgrade">Upgrade</a></li>
           </ul>
