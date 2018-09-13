@@ -4,9 +4,7 @@ export default class SecondaryHeader extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      selected: props.selected
-    }
+    this.state = { selected: props.selected }
   }
 
   handleMenu = () => {
