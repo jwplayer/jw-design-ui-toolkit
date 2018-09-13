@@ -5,7 +5,9 @@ This repository contains a single source of truth for global styles and componen
 ## Using Hook in Your Project:
 
 ### Installing the Submodule
-Navigate to the root of your project and run the following command:
+We recommend that Hook lives at the root of your project. However, some projects like those using `create-react-app` require Hook to live within the `/src` directory. This may vary by project.
+
+Navigate to the appropriate directory and run the following command:
 ```
 git submodule add git@github.com:jwplayer/jw-design-system.git
 ```
@@ -29,24 +31,72 @@ git submodule update --remote --merge
 Hook styles can be included in two ways:
 
 ##### 1. Pull LESS into Build Process
-To include global LESS (to be compiled & minified alongside your own), import it into your own LESS file as follows:
+If you're using LESS with Webpack, you'll need to include Hook styles in your build in order to reference variables properly. To do this, import Hook before your other LESS files as follows:
 ```
-@import 'path/to/jw-design-system/styles/build.less'
+@import 'path/to/jw-design-system/styles/hook.less';
+@import 'path/to/your/other/styles/main.less';
 ```
 -or-
 ##### 2. Include Pre-Minified CSS Stylesheet
-This project contains a Grunt file that builds all LESS into a single, minified CSS file called `hook.min.css`. Reference the standalone stylesheet in the document head as follows:
+You can also include plain CSS the old-fashioned way by referencing all minified styles in `hook.min.css`. Reference the standalone stylesheet in the document `<head>` as follows:
 ```
 <link rel="stylesheet" type="text/css" href="./jw-design-system/styles/hook.min.css">
 ```
+### Referencing Components
+Each folder within `/components` contains an agnostic HTML version, a version with Jekyll logic built in, and a React-ready JSX version.
 
-## Updating Hook Styles & Components
+#### React / JSX
+JSX components contain their own functionality. Import them as follows:
+
+```
+import SiteHeader from 'path/to/jw-design-system/components/site-header';
+```
+
+`Site Header` and  `Site Footer` have dynamic titles & styles and should be customized by passing `site` via props, which must equal one of the following:
+- developer
+- support
+- company
+- dashboard
+
+For example:
+```
+<SiteHeader site="support" />
+<SiteFooter site="developer" />
+```
+
+`Secondary Site Header` should be passed `selected` props to determine which menu item should be shown by default. Props must equal one of the following:
+- jwplayer
+- jwplatform
+- android
+- ios
+- devtools
+- releasenotes
+
+For example:
+```
+<SiteSecondaryHeader selected="devtools" />
+```
+
+#### Jekyll & Grunt
+Simply add a step to your `grunt-copy` task to pull your components into your `_includes`. The object should look something like this:
+```
+{
+  cwd: 'jw-design-system/components',
+  src: '**/*.html',
+  dest: 'tmp/path/to/html/files/_includes',
+  expand: true,
+  flatten: true
+}
+```
+**Note:** You'll also need to reference the `components.js` file in order for the menus and functionality to work.
+
+## Updating Hook:
 To update code within Hook, navigate to the root of this project and run:
 ```
 npm install
 grunt
 ```
-This will watch all LESS for changes as you develop and update the minified CSS file.
+This will watch all LESS for changes as you develop and update the minified CSS file. If you're updating `Site Header`, `Site Secondary Header` or `Site Footer`, you'll need to update all files within the folder to ensure consistency between the html and jsx versions.
 
 ### Preview Mode
 Here you can preview any UI changes made to the global components. Preview mode will watch everything in the `components` and `styles` folders and rebuild as you make changes, but it **_does not hot reload_** the browser and will require a page refresh.
