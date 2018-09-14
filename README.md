@@ -2,7 +2,7 @@
 
 This repository contains a single source of truth for global styles and components used across JW Player sites & products. It's maintained here and included in other projects as a [git submodule](https://git-scm.com/docs/git-submodule).
 
-## Using Hook in Your Project:
+## Including Hook in Your Project:
 
 ### Installing the Submodule
 We recommend that Hook lives at the root of your project. However, some projects like those using `create-react-app` require Hook to live within the `/src` directory. This may vary by project.
@@ -90,8 +90,8 @@ Simply add a step to your `grunt-copy` task to pull your components into your `_
 ```
 **Note:** You'll also need to reference the `components.js` file in order for the menus and functionality to work.
 
-## Updating Hook:
-To update code within Hook, navigate to the root of this project and run:
+## Contributing to Hook Source Code:
+To update code within Hook itself, navigate to the root of this project and run:
 ```
 npm install
 grunt
