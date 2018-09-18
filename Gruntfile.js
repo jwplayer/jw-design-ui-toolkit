@@ -4,7 +4,7 @@ module.exports = function (grunt) {
   config.pkg = grunt.file.readJSON('package.json');
 
   config.watch = {
-    files: ['styles/**/*.less'],
+    files: ['styles/**/*.less', 'icons/dashboard/**/*.svg', 'icons/player/**/*.svg'],
     tasks: ['default']
   };
 
