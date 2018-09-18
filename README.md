@@ -42,6 +42,9 @@ You can also include plain CSS the old-fashioned way by referencing all minified
 ```
 <link rel="stylesheet" type="text/css" href="./jw-design-system/styles/hook.min.css">
 ```
+### Using Icons
+Hook comes with two SVG sprites that contain all of the icons used across both the dashboard and the player. Step-by-step instructions coming soon.
+
 ### Referencing Components
 Each folder within `/components` contains an agnostic HTML version, a version with Jekyll logic built in, and a React-ready JSX version.
 
@@ -113,3 +116,6 @@ grunt server
 ```
 #### Adding Components to Preview:
 Preview mode contains a JSON file that pulls from each component. If you add a new item to the `components` folder, add its title and file name in `src/_data/components.json` to view it in the preview context.
+
+#### Adding New Icons
+TBD

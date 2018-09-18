@@ -29,7 +29,7 @@ function handleSecondaryHeader() {
 }
 
 (function handleCopyright() {
-  var copyright = document.querySelector('.global-site-footer .copyright')
+  var copyright = document.querySelector('.site-footer-copyright')
   var maxDate = new Date().getFullYear();
   copyright.innerHTML= "&copy; 2016 - " + maxDate + " | Longtail Ad Solutions, Inc. All Rights Reserved. JW Player is a registered trademark."
 })();
