@@ -34,7 +34,7 @@ const SiteFooter = (props) => {
         </div>
       </div>
       <div className="footer-base-row">
-        <div className="copyright">
+        <div className="site-footer-copyright">
           &copy; 2016 - {new Date().getFullYear()} | Longtail Ad Solutions, Inc. All Rights Reserved. JW Player is a registered trademark.
         </div>
         <div className="footer-links">

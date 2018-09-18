@@ -2,7 +2,7 @@
 
 This repository contains a single source of truth for global styles and components used across JW Player sites & products. It's maintained here and included in other projects as a [git submodule](https://git-scm.com/docs/git-submodule).
 
-## Including Hook in Your Project:
+## Including Hook in Your Project
 
 ### Installing the Submodule
 We recommend that Hook lives at the root of your project. However, some projects like those using `create-react-app` require Hook to live within the `/src` directory. This may vary by project.
@@ -27,7 +27,8 @@ Because **_jw-design-system_** is subject to new updates, it's a best practice t
 git submodule update --remote --merge
 ```
 
-### Including Styles
+## How to Reference Hook
+### LESS/CSS
 Hook styles can be included in two ways:
 
 ##### 1. Pull LESS into Build Process
@@ -42,10 +43,15 @@ You can also include plain CSS the old-fashioned way by referencing all minified
 ```
 <link rel="stylesheet" type="text/css" href="./jw-design-system/styles/hook.min.css">
 ```
-### Referencing Components
+
+### Icons
+Hook comes with two SVG sprites that contain all of the icons used across both the dashboard and the player. Step-by-step instructions coming soon.
+
+
+### Components
 Each folder within `/components` contains an agnostic HTML version, a version with Jekyll logic built in, and a React-ready JSX version.
 
-#### React / JSX
+##### React / JSX:
 JSX components contain their own functionality. Import them as follows:
 
 ```
@@ -77,7 +83,7 @@ For example:
 <SiteSecondaryHeader selected="devtools" />
 ```
 
-#### Jekyll & Grunt
+##### Jekyll & Grunt
 Simply add a step to your `grunt-copy` task to pull your components into your `_includes`. The object should look something like this:
 ```
 {
@@ -90,18 +96,30 @@ Simply add a step to your `grunt-copy` task to pull your components into your `_
 ```
 **Note:** You'll also need to reference the `components.js` file in order for the menus and functionality to work.
 
-## Contributing to Hook Source Code:
-To update code within Hook itself, navigate to the root of this project and run:
+## Contributing to Hook Source Code
+
+### Running Locally
+To run this project on your machine:
 ```
 npm install
 grunt
 ```
-This will watch all LESS for changes as you develop and update the minified CSS file. If you're updating `Site Header`, `Site Secondary Header` or `Site Footer`, you'll need to update all files within the folder to ensure consistency between the html and jsx versions.
+This will automatically watch and update the CSS + icon sprites as you develop.
 
-### Preview Mode
+**Note:** If you're making changes to `Site Header`, `Site Secondary Header` or `Site Footer`, be sure to update both HTML and JSX versions.
+
+#### Adding a New Stylesheet
+1. Add your LESS stylesheet to the `styles` folder
+2. Import it in the `hook.less` master file as follows: `@import 'path/to/your/file';`
+
+#### Adding New Icons
+1. Determine if your new icon belongs to the player or dashboard/sites and add the SVG to the appropriate folder
+2. That's it! Grunt will automatically add your new icon to the appropriate sprite
+
+#### Using Preview Mode
 Here you can preview any UI changes made to the global components. Preview mode will watch everything in the `components` and `styles` folders and rebuild as you make changes, but it **_does not hot reload_** the browser and will require a page refresh.
 
-#### Running Preview:
+##### Running Preview
 Navigate to the `preview` directory and run:
 ```
 npm install
@@ -111,5 +129,6 @@ Now run the following two commands simultaneously to run a server at [localhost:
 grunt watch
 grunt server
 ```
-#### Adding Components to Preview:
+
+##### Adding Components to Preview
 Preview mode contains a JSON file that pulls from each component. If you add a new item to the `components` folder, add its title and file name in `src/_data/components.json` to view it in the preview context.
