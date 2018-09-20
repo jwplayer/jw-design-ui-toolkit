@@ -45,44 +45,18 @@ module.exports = function (grunt) {
 
   config.svg_sprite = {
     dashboard: {
-      options: {
-        mode: {
-          css: {
-            bust: false,
-            sprite: 'icons-dashboard.svg',
-            render: {
-              less: true,
-              less: {
-                dest: '../../../styles/icons-dashboard.less'
-              }
-            }
-          }
-        }
-      },
       expand: true,
       cwd: 'icons/dashboard',
       src: ['*.svg'],
-      dest: 'icons'
-    },
-    player: {
+      dest: 'icons',
       options: {
         mode: {
           css: {
             bust: false,
-            sprite: 'icons-player.svg',
-            render: {
-              less: true,
-              less: {
-                dest: '../../../styles/icons-player.less'
-              }
-            }
+            sprite: 'icons-dashboard.svg'
           }
         }
-      },
-      expand: true,
-      cwd: 'icons/player',
-      src: ['*.svg'],
-      dest: 'icons'
+      }
     }
   };
 
@@ -105,8 +79,8 @@ module.exports = function (grunt) {
       'rename',
       'less',
       'cssmin',
-      'clean:nonMinified',
-      'watch'
+      'clean:nonMinified'
+      // 'watch'
     ];
 
     grunt.task.run(tasks);
