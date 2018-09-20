@@ -8,6 +8,51 @@
   <title>Hook Preview Mode</title>
   <link rel="icon" type="image/png" href="./favicon.png" />
   <link rel="stylesheet" href="./style.css" />
+  <style>
+    .jw-icon {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      fill: white;
+    }
+
+    .jw-icon.sm {
+      width: 18px;
+      height: 18px;
+    }
+
+    .jw-icon.med {
+      width: 22px;
+      height: 22px;
+    }
+
+    .jw-icon.lg {
+      width: 26px;
+      height: 26px;
+    }
+
+    ul {
+      margin-bottom: 40px;
+    }
+
+    span {
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+
+    svg {
+      margin-right: 5px;
+    }
+
+    .row {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+  </style>
 </head>
 <body>
   {% include site-header.html %}
@@ -23,10 +68,42 @@
         </li>
         {% endfor %}
       </ul>
-
-      <svg class="jw-icon">
-        <use class="jw-icon-add" xlink:href="icons-dashboard.svg#add"></use>
-      </svg>
+      <div class="row">
+        <span>Small </span>
+        <svg class="jw-icon sm">
+          <use href="icons-dashboard.svg#add"></use>
+        </svg>
+        <svg class="jw-icon sm">
+          <use href="icons-dashboard.svg#download"></use>
+        </svg>
+        <svg class="jw-icon sm">
+          <use href="icons-dashboard.svg#calendar"></use>
+        </svg>
+      </div>
+      <div class="row">
+        <span>Medium </span>
+        <svg class="jw-icon med">
+          <use href="icons-dashboard.svg#add"></use>
+        </svg>
+        <svg class="jw-icon med">
+          <use href="icons-dashboard.svg#download"></use>
+        </svg>
+        <svg class="jw-icon med">
+          <use href="icons-dashboard.svg#calendar"></use>
+        </svg>
+      </div>
+      <div class="row">
+        <span>Large </span>
+        <svg class="jw-icon lg">
+          <use href="icons-dashboard.svg#add"></use>
+        </svg>
+        <svg class="jw-icon lg">
+          <use href="icons-dashboard.svg#download"></use>
+        </svg>
+        <svg class="jw-icon lg">
+          <use href="icons-dashboard.svg#calendar"></use>
+        </svg>
+      </div>
     </div>
   </div>
   {% include site-footer.html selected="developer" %}

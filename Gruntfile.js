@@ -32,30 +32,10 @@ module.exports = function (grunt) {
     }
   };
 
-  config.rename = {
-    main: {
-      files: [
-    		{
-          src: ['icons/css'],
-          dest: 'icons/sprites'
-        }
-      ]
-    }
-  };
-
-  config.svg_sprite = {
+  config.svgstore = {
     dashboard: {
-      expand: true,
-      cwd: 'icons/dashboard',
-      src: ['*.svg'],
-      dest: 'icons',
-      options: {
-        mode: {
-          css: {
-            bust: false,
-            sprite: 'icons-dashboard.svg'
-          }
-        }
+      files: {
+        'icons/sprites/icons-dashboard.svg' : ['icons/dashboard/**/*.svg']
       }
     }
   };
@@ -68,19 +48,17 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-svg-sprite');
-  grunt.loadNpmTasks('grunt-contrib-rename');
+  grunt.loadNpmTasks('grunt-svgstore');
 
   grunt.registerTask('default', '', function() {
 
     var tasks = [
       'clean:all',
-      'svg_sprite',
-      'rename',
+      'svgstore',
       'less',
       'cssmin',
-      'clean:nonMinified'
-      // 'watch'
+      'clean:nonMinified',
+      'watch'
     ];
 
     grunt.task.run(tasks);
