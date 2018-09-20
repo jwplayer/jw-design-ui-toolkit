@@ -1,0 +1,5 @@
+highlighter: true
+page_gen:
+  - data: 'components'
+    template: 'component'
+    name: 'component_name'

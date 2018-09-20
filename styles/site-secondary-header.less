@@ -1,78 +1,84 @@
 @site-secondary-header-height: 56px;
 
 .site-secondary-header {
-  background: mix(@jw-blue, black, 70%);
+  background: @jw-charcoal;
   height: @site-secondary-header-height;
   font-family: @open-sans;
+  border-bottom: 1px solid mix(@black,@jw-charcoal,50%);
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: @max-width;
+
+    a {
+      display: none;
+      width: 100%;
+
+      &:hover {
+        background-color: fade(@black,50%);
+      }
+    }
+    .site-secondary-header-dropdown-link {
+      display: none;
+    }
+  }
+  &-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &-dropdown {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    border-right: 1px solid @black;
+    background-color: @jw-charcoal;
+    border-bottom: 1px solid mix(@black,@jw-charcoal,50%);
+    margin-bottom: -1px;
+
+    a:hover {
+      background-color: fade(@black,50%);
+    }
+    .is-selected {
+      color: white;
+      display: block;
+    }
+
+    &.is-open .site-secondary-header-dropdown-link {
+      display: block;
+    }
+  }
+  a {
+    color: white;
+    font-size: 15px;
+    font-weight: @open-sans-semibold;
+    line-height: 55px;
+    padding: 0 20px;
+    text-align: left;
+    text-decoration: none;
+
+    &.site-secondary-header-dropdown-arrow {
+      background-image: url('//icons.jwplayer.com/icons/white/expand.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px;
+      content: '';
+      display: block;
+      height: @site-secondary-header-height;
+      line-height: @site-secondary-header-height;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: @site-secondary-header-height;
+      z-index: 1;
+    }
+  }
 }
-.site-secondary-header-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: @max-width;
-}
-.site-secondary-header-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.site-secondary-header-dropdown {
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-}
-.site-secondary-header a {
-  color: white;
-  font-size: 15px;
-  font-weight: @open-sans-semibold;
-  line-height: @site-secondary-header-height;
-  padding: 0 20px;
-  text-align: left;
-  text-decoration: none;
-}
-.site-secondary-header-dropdown a {
-  background-color: mix(@jw-blue, black, 90%);
-  color: mix(white, @jw-blue, 70%);
-  font-size: 15px;
-}
-.site-secondary-header-dropdown .is-selected {
-  color: white;
-}
-.site-secondary-header-dropdown a:hover {
-  background-color: mix(@jw-blue, black, 80%);
-  color: white;
-}
-.site-secondary-header a.site-secondary-header-dropdown-arrow {
-  background-image: url('//icons.jwplayer.com/icons/white/expand.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 12px;
-  content: '';
-  display: block;
-  height: @site-secondary-header-height;
-  line-height: @site-secondary-header-height;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: @site-secondary-header-height;
-  z-index: 1;
-}
-.site-secondary-header-container > a {
-  background-color: @jw-blue;
-  display: none;
-  width: 100%;
-}
-.site-secondary-header-container > a:hover {
-  background-color: mix(@jw-blue, black, 90%);
-}
-.site-secondary-header-dropdown-link {
-  display: none;
-}
-.site-secondary-header-dropdown.is-open .site-secondary-header-dropdown-link,
-.site-secondary-header-dropdown .is-selected {
-  display: block;
-}
+
+
 @media (min-width: 900px) {
   .site-secondary-header-container {
     flex-direction: row;
@@ -87,6 +93,7 @@
   .site-secondary-header-container > a {
     display: block;
     text-align: center;
+    border-right: 1px solid @black;
   }
   .site-secondary-header-group {
     flex: 2;
@@ -99,13 +106,12 @@
   .site-secondary-header a::before,
   .site-secondary-header-dropdown a::after,
   .site-secondary-header-dropdown.is-open::before {
-    background-color: mix(@jw-blue, black, 80%);
+    background-color: @jw-charcoal;
     content: '';
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 1px;
   }
   .site-secondary-header a::before {
     left: auto;
@@ -120,16 +126,7 @@
   .site-secondary-header-dropdown-arrow::after {
     display: none;
   }
-  // .site-secondary-header a.is-visible:last-child::after {
-  //   background-color: mix(@jw-blue, black, 80%);
-  //   bottom: 0;
-  //   content: '';
-  //   height: 1px;
-  //   position: absolute;
-  //   right: 0;
-  //   top: auto;
-  //   width: 100%;
-  // }
+
   .site-secondary-header-dropdown {
     left: 0;
     position: absolute;
