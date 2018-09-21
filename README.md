@@ -9,9 +9,9 @@ We recommend that Hook lives at the root of your project. However, some projects
 
 Navigate to the appropriate directory and run the following command:
 ```
-git submodule add git@github.com:jwplayer/jw-design-system.git
+git submodule add git@github.com:jwplayer/jw-design-ui-toolkit.git
 ```
-You should now see a folder called **_jw-design-system_** in your file structure. Reference the files like any other directory in your project.
+You should now see a folder called **_jw-design-ui-toolkit_** in your file structure. Reference the files like any other directory in your project.
 
 ### Updating
 To be sure you're using the most recent version of Hook, it's a best practice to pull down changes regularly. To do this, run:
@@ -21,9 +21,9 @@ git submodule update --remote --merge
 ### Removing
 Adding Hook may throw an error if an old instance of it already exists.  To remove outdated/unwanted traces of Hook, run:
 ```
-git submodule deinit -f -- jw-design-system
-rm -rf .git/modules/jw-design-system
-git rm -rf jw-design-system
+git submodule deinit -f -- jw-design-ui-toolkit
+rm -rf .git/modules/jw-design-ui-toolkit
+git rm -rf jw-design-ui-toolkit
 ```
 
 ## How to Reference Hook
@@ -123,7 +123,7 @@ For example:
 Simply add a step to your `grunt-copy` task to pull your components into your `_includes`. The object should look something like this:
 ```
 {
-  cwd: 'jw-design-system/components',
+  cwd: 'jw-design-ui-toolkit/components',
   src: '**/*.html',
   dest: 'tmp/path/to/html/files/_includes',
   expand: true,

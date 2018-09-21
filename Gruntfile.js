@@ -26,6 +26,19 @@ module.exports = function (grunt) {
     }
   };
 
+  config.copy = {
+    main: {
+      files: [
+        {
+          expand: true,
+          cwd: 'icons/sprites',
+          src: ['**/*'],
+          dest: 'preview-mode/src/sprites'
+        },
+      ]
+    }
+  }
+
   config.svgstore = {
     dashboard: {
       files: { 'icons/sprites/icons-dashboard.svg' : ['icons/dashboard/**/*.svg'] }
@@ -39,6 +52,7 @@ module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -50,6 +64,7 @@ module.exports = function (grunt) {
     var tasks = [
       'clean:all',
       'svgstore',
+      'copy',
       'less',
       'cssmin',
       'clean:nonMinified',

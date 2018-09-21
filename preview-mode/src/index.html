@@ -12,56 +12,352 @@
 <body>
   {% include site-header.html %}
   {% include site-secondary-header.html product="player" %}
-  <div class="product-hero">
-    <div class="product-hero-container">
+  <div class="main">
+    <div class="main-container">
       <h1>Hook Preview Mode</h1>
-      <p>Here you can test UI changes on the site headers, footer, and any new components before updating them on a live site. To isolate a specific component outside of the context of this page, select it from the list below.</p>
-      <ul>
-        {% for component in site.data.components %}
-        <li>
-          <p><a href="/components/{{component.filename}}">{{component.component_name}}</a></p>
-        </li>
-        {% endfor %}
-      </ul>
-      <div class="row">
-        <span>Small </span>
-        <svg class="jw-icon small">
-          <use href="test-sprite.svg#close"></use>
-        </svg>
-        <svg class="jw-icon small">
-          <use href="test-sprite.svg#discover"></use>
-        </svg>
-        <svg class="jw-icon small">
-          <use href="test-sprite.svg#settings"></use>
-        </svg>
+      <p>Here you can test UI changes on the site headers, footer, and any new components before updating them on a live site. Styles you see here are pulled directly from Hook's main source code.</p>
+      <div class="icon-size-test">
+        <h2>Icon Sizing</h2>
+        <p>Small (18px), Medium (22px), Large (26px)</p>
+        <div class="row">
+          <svg class="jw-icon jw-icon-sm">
+            <use href="sprites/icons-dashboard.svg#close"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-med">
+            <use href="sprites/icons-dashboard.svg#close"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-lg">
+            <use href="sprites/icons-dashboard.svg#close"></use>
+          </svg>
+        </div>
+        <div class="row">
+          <svg class="jw-icon jw-icon-sm">
+            <use href="sprites/icons-dashboard.svg#calendar"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-med">
+            <use href="sprites/icons-dashboard.svg#calendar"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-lg">
+            <use href="sprites/icons-dashboard.svg#calendar"></use>
+          </svg>
+        </div>
+        <div class="row">
+          <svg class="jw-icon jw-icon-sm">
+            <use href="sprites/icons-dashboard.svg#credit-card"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-med">
+            <use href="sprites/icons-dashboard.svg#credit-card"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-lg">
+            <use href="sprites/icons-dashboard.svg#credit-card"></use>
+          </svg>
+        </div>
+        <div class="row">
+          <svg class="jw-icon jw-icon-sm">
+            <use href="sprites/icons-dashboard.svg#settings"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-med">
+            <use href="sprites/icons-dashboard.svg#settings"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-lg">
+            <use href="sprites/icons-dashboard.svg#settings"></use>
+          </svg>
+        </div>
+        <div class="row">
+          <svg class="jw-icon jw-icon-sm">
+            <use href="sprites/icons-dashboard.svg#tool"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-med">
+            <use href="sprites/icons-dashboard.svg#tool"></use>
+          </svg>
+          <svg class="jw-icon jw-icon-lg">
+            <use href="sprites/icons-dashboard.svg#tool"></use>
+          </svg>
+        </div>
       </div>
-      <div class="row">
-        <span>Medium </span>
-        <svg class="jw-icon medium">
-          <use href="test-sprite.svg#close"></use>
-        </svg>
-        <svg class="jw-icon medium">
-          <use href="test-sprite.svg#discover"></use>
-        </svg>
-        <svg class="jw-icon medium">
-          <use href="test-sprite.svg#settings"></use>
-        </svg>
-      </div>
-      <div class="row">
-        <span>Large </span>
-        <svg class="jw-icon large">
-          <use href="test-sprite.svg#close"></use>
-        </svg>
-        <svg class="jw-icon large">
-          <use href="test-sprite.svg#discover"></use>
-        </svg>
-        <svg class="jw-icon large">
-          <use href="test-sprite.svg#settings"></use>
-        </svg>
+      <h2>Icon Library</h2>
+      <div class="icon-grid">
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#add"></use>
+          </svg>
+          <p class="title">Add</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#airplay"></use>
+          </svg>
+          <p class="title">Airplay</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#analytics"></use>
+          </svg>
+          <p class="title">Analytics</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#arrow"></use>
+          </svg>
+          <p class="title">Arrow</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#calendar"></use>
+          </svg>
+          <p class="title">Calendar</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#checkmark"></use>
+          </svg>
+          <p class="title">Checkmark</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#close"></use>
+          </svg>
+          <p class="title">Close</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#collapse-expand"></use>
+          </svg>
+          <p class="title">Collapse-Expand</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#credit-card"></use>
+          </svg>
+          <p class="title">Credit-Card</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#customize"></use>
+          </svg>
+          <p class="title">Customize</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#device-desktop"></use>
+          </svg>
+          <p class="title">Device-Desktop</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#device-landscape"></use>
+          </svg>
+          <p class="title">Device Landscape</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#device-portrait"></use>
+          </svg>
+          <p class="title">Device-Portrait</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#document"></use>
+          </svg>
+          <p class="title">Document</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#download"></use>
+          </svg>
+          <p class="title">download</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#drag"></use>
+          </svg>
+          <p class="title">drag</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#edit"></use>
+          </svg>
+          <p class="title">edit</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#embed"></use>
+          </svg>
+          <p class="title">embed</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#external-link"></use>
+          </svg>
+          <p class="title">external-link</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#full-screen-off"></use>
+          </svg>
+          <p class="title">full-screen-off</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#full-screen-on"></use>
+          </svg>
+          <p class="title">full-screen-on</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#grid"></use>
+          </svg>
+          <p class="title">grid</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#help"></use>
+          </svg>
+          <p class="title">help</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#home"></use>
+          </svg>
+          <p class="title">home</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#key"></use>
+          </svg>
+          <p class="title">key</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#labs"></use>
+          </svg>
+          <p class="title">labs</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#link"></use>
+          </svg>
+          <p class="title">link</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#list-big"></use>
+          </svg>
+          <p class="title">list-big</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#list-small"></use>
+          </svg>
+          <p class="title">list-small</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#lock"></use>
+          </svg>
+          <p class="title">lock</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#mail"></use>
+          </svg>
+          <p class="title">mail</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#monetize"></use>
+          </svg>
+          <p class="title">monetize</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#phone"></use>
+          </svg>
+          <p class="title">phone</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#play"></use>
+          </svg>
+          <p class="title">play</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#preview"></use>
+          </svg>
+          <p class="title">preview</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#recommendations"></use>
+          </svg>
+          <p class="title">recommendations</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#search"></use>
+          </svg>
+          <p class="title">search</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#settings"></use>
+          </svg>
+          <p class="title">settings</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#share"></use>
+          </svg>
+          <p class="title">share</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#sort"></use>
+          </svg>
+          <p class="title">sort</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#thumbnail"></use>
+          </svg>
+          <p class="title">thumbnail</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#tool"></use>
+          </svg>
+          <p class="title">tool</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#trash"></use>
+          </svg>
+          <p class="title">trash</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#trim"></use>
+          </svg>
+          <p class="title">trim</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#upload"></use>
+          </svg>
+          <p class="title">upload</p>
+        </div>
+        <div class="icon-box">
+          <svg class="jw-icon">
+            <use href="sprites/icons-dashboard.svg#warning"></use>
+          </svg>
+          <p class="title">warning</p>
+        </div>
       </div>
     </div>
   </div>
   {% include site-footer.html selected="developer" %}
   <script src="main.min.js"></script>
+  <script src="grid.js"></script>
 </body>
 </html>
