@@ -56,7 +56,7 @@ Simply create an svg element with a class of `jw-icon` in your HTML:
 
 * `path_to_hook`: the relative path to where Hook is included in your project
 * `sprite_name`: the name of the sprite (_icons-dashboard_ or _icons-player_)
-* `icon_name`: is the icon name, which will display the corresponding icon
+* `icon_name`: is the icon name, which will display the corresponding icon (all names can be found in the icons folder or in the table in preview-mode)
 
 
 #### Sizing & Colors
