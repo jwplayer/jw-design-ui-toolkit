@@ -62,15 +62,15 @@ Simply create an svg element with a class of `jw-icon` in your HTML:
 #### Sizing & Colors
 UI icons by default are black, 18px and occupy a square artboard. Add one of the following classes to specify an alternate size:
 
-| Class  | Size  |
-| ------ | ----- |
-| small  | 18px  |
-| medium | 22px  |
-| large  | 26px  |
+|    Class    | Size |
+| ----------- | ---- |
+| jw-icon-sm  | 18px |
+| jw-icon-med | 22px |
+| jw-icon-lg  | 26px |
 
 Append the class to the svg itself:
 ```
-<svg class="jw-icon medium">
+<svg class="jw-icon jw-icon-med">
   <use href="/path_to_hook/icons/sprite_name.svg#icon_name"></use>
 </svg>
 ```
