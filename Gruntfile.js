@@ -15,28 +15,23 @@ module.exports = function (grunt) {
 
   config.less = {
     build: {
-      files: {
-        'styles/hook.css' : 'styles/hook.less'
-      }
+      files: { 'styles/hook.css' : 'styles/hook.less' }
     }
   };
 
   config.cssmin = {
     build: {
-      options: {
-        keepSpecialComments: 0
-      },
-      files: {
-        'styles/hook.min.css': 'styles/hook.css'
-      }
+      options: { keepSpecialComments: 0 },
+      files: { 'styles/hook.min.css': 'styles/hook.css' }
     }
   };
 
   config.svgstore = {
     dashboard: {
-      files: {
-        'icons/sprites/icons-dashboard.svg' : ['icons/dashboard/**/*.svg']
-      }
+      files: { 'icons/sprites/icons-dashboard.svg' : ['icons/dashboard/**/*.svg'] }
+    },
+    player: {
+      files: { 'icons/sprites/icons-player.svg' : ['icons/player/**/*.svg'] }
     }
   };
 

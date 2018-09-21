@@ -103,7 +103,8 @@ module.exports = function(grunt) {
       'concat',
       'uglify',
       'less',
-      'clean:tmp'
+      'clean:tmp',
+      'watch'
     ]);
   });
 }
