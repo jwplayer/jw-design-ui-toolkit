@@ -15,74 +15,23 @@ module.exports = function (grunt) {
 
   config.less = {
     build: {
-      files: {
-        'styles/hook.css' : 'styles/hook.less'
-      }
+      files: { 'styles/hook.css' : 'styles/hook.less' }
     }
   };
 
   config.cssmin = {
     build: {
-      options: {
-        keepSpecialComments: 0
-      },
-      files: {
-        'styles/hook.min.css': 'styles/hook.css'
-      }
+      options: { keepSpecialComments: 0 },
+      files: { 'styles/hook.min.css': 'styles/hook.css' }
     }
   };
 
-  config.rename = {
-    main: {
-      files: [
-    		{
-          src: ['icons/css'],
-          dest: 'icons/sprites'
-        }
-      ]
-    }
-  };
-
-  config.svg_sprite = {
+  config.svgstore = {
     dashboard: {
-      options: {
-        mode: {
-          css: {
-            bust: false,
-            sprite: 'icons-dashboard.svg',
-            render: {
-              less: true,
-              less: {
-                dest: '../../../styles/icons-dashboard.less'
-              }
-            }
-          }
-        }
-      },
-      expand: true,
-      cwd: 'icons/dashboard',
-      src: ['*.svg'],
-      dest: 'icons'
+      files: { 'icons/sprites/icons-dashboard.svg' : ['icons/dashboard/**/*.svg'] }
     },
     player: {
-      options: {
-        mode: {
-          css: {
-            bust: false,
-            sprite: 'icons-player.svg',
-            render: {
-              less: true,
-              less: {
-                dest: '../../../styles/icons-player.less'
-              }
-            }
-          }
-        }
-      },
-      expand: true,
-      cwd: 'icons/player',
-      src: ['*.svg'],
-      dest: 'icons'
+      files: { 'icons/sprites/icons-player.svg' : ['icons/player/**/*.svg'] }
     }
   };
 
@@ -94,15 +43,13 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-svg-sprite');
-  grunt.loadNpmTasks('grunt-contrib-rename');
+  grunt.loadNpmTasks('grunt-svgstore');
 
   grunt.registerTask('default', '', function() {
 
     var tasks = [
       'clean:all',
-      'svg_sprite',
-      'rename',
+      'svgstore',
       'less',
       'cssmin',
       'clean:nonMinified',

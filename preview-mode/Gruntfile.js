@@ -83,7 +83,7 @@ module.exports = function(grunt) {
   }
 
   config.watch = {
-    files: [ 'src/**/*', '../components/**/*' ],
+    files: [ 'src/**/*', '../components/**/*', '../styles/**/*' ],
     tasks: [ 'default' ],
     options: {
       atBegin: true,
