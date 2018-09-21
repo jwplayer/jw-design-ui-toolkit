@@ -1,5 +1,5 @@
 {
-  "name": "jw-design-system",
+  "name": "jw-design-ui-toolkit",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jwplayer/jw-design-system.git"
+    "url": "git+https://github.com/jwplayer/jw-design-ui-toolkit.git"
   },
   "author": "JW Player",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jwplayer/jw-design-system/issues"
+    "url": "https://github.com/jwplayer/jw-design-ui-toolkit/issues"
   },
-  "homepage": "https://github.com/jwplayer/jw-design-system#readme",
+  "homepage": "https://github.com/jwplayer/jw-design-ui-toolkit#readme",
   "dependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.1.0",

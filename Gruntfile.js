@@ -27,13 +27,16 @@ module.exports = function (grunt) {
   };
 
   config.copy = {
-    files: [
-      { 
-        expand: true,
-        src: ['icons/sprites/*'],
-        dest: 'preview-mode/sprites'
-      },
-    ]
+    main: {
+      files: [
+        {
+          expand: true,
+          cwd: 'icons/sprites',
+          src: ['**/*'],
+          dest: 'preview-mode/src/sprites'
+        },
+      ]
+    }
   }
 
   config.svgstore = {
