@@ -1,4 +1,4 @@
-# JW UI Toolkit (Hook)
+# JW Design UI Toolkit (Hook)
 
 This repository contains a single source of truth for global styles, icons and components used across JW Player sites & products. It's maintained here and included in other projects as a [git submodule](https://git-scm.com/docs/git-submodule).
 
