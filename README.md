@@ -1,6 +1,6 @@
 # JW UI Toolkit (Hook)
 
-This repository contains a single source of truth for global styles and components used across JW Player sites & products. It's maintained here and included in other projects as a [git submodule](https://git-scm.com/docs/git-submodule).
+This repository contains a single source of truth for global styles, icons and components used across JW Player sites & products. It's maintained here and included in other projects as a [git submodule](https://git-scm.com/docs/git-submodule).
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ git submodule add git@github.com:jwplayer/jw-design-system.git
 You should now see a folder called **_jw-design-system_** in your file structure. Reference the files like any other directory in your project.
 
 ### Updating
-To be sure you're using the most recent version of Hook, it's a best practice to pull down changes regularly. To update your project's version of Hook, run:
+To be sure you're using the most recent version of Hook, it's a best practice to pull down changes regularly. To do this, run:
 ```
 git submodule update --remote --merge
 ```
@@ -26,26 +26,27 @@ rm -rf .git/modules/jw-design-system
 git rm -rf jw-design-system
 ```
 
-## Usage
+## How to Reference Hook
 ### Styles
 Hook styles can be included in two ways:
 
-##### 1. Pull LESS into Build Process
+#### 1. Pull LESS into Build Process
 If you're using LESS with Webpack, you'll need to include Hook styles in your build in order to reference variables properly. To do this, import Hook before your other LESS files as follows:
 ```
 @import 'path_to_hook/styles/hook.less';
 @import 'path_to_your_other_styles/main.less';
 ```
--or-
-##### 2. Include Pre-Minified CSS Stylesheet
+**- or -**
+#### 2. Include Pre-Minified CSS Stylesheet
 You can also include plain CSS the old-fashioned way by referencing all minified styles in `hook.min.css`. Reference the standalone stylesheet in the document `<head>` as follows:
 ```
-<link rel="stylesheet" type="text/css" href="./jw-design-system/styles/hook.min.css">
+<link rel="stylesheet" type="text/css" href="path_to_hook/styles/hook.min.css">
 ```
 
 ### Icons
 The icons folder contains two SVG sprites, `icons-player` and `icons-dashboard`, that can be easily referenced and customized with CSS.  
 
+#### Usage
 Simply create an svg element with a class of `jw-icon` in your HTML:
 ```
 <svg class="jw-icon">
@@ -53,9 +54,9 @@ Simply create an svg element with a class of `jw-icon` in your HTML:
 </svg>
 ```
 
-`path_to_hook`: the relative path to where Hook is included in your project
-`sprite_name`: the name of the sprite (_icons-dashboard_ or _icons-player_)
-`icon_name`: is the icon name, which will display the corresponding icon
+* `path_to_hook`: the relative path to where Hook is included in your project
+* `sprite_name`: the name of the sprite (_icons-dashboard_ or _icons-player_)
+* `icon_name`: is the icon name, which will display the corresponding icon
 
 
 #### Sizing & Colors
@@ -73,17 +74,20 @@ Append the class to the svg itself:
   <use href="/path_to_hook/icons/sprite_name.svg#icon_name"></use>
 </svg>
 ```
-To override the icon's color, specify a new fill in CSS:
+
+You can override an icon's color or size with CSS:
 ```
 .jw-icon {
     fill: #7bb4e5;
+    width: 10px;
+    height: 10px;
 }
 ```
 
 ### Components
 Each folder within `components` contains an agnostic HTML version, a version with Jekyll logic built in, and a React-ready JSX version.
 
-##### React / JSX:
+#### React / JSX:
 JSX components contain their own functionality. Import them as follows:
 
 ```
@@ -115,7 +119,7 @@ For example:
 <SecondaryHeader selected="devtools" />
 ```
 
-##### Jekyll & Grunt
+#### Jekyll & Grunt
 Simply add a step to your `grunt-copy` task to pull your components into your `_includes`. The object should look something like this:
 ```
 {
