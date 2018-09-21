@@ -102,7 +102,7 @@ For example:
 <SiteFooter site="developer" />
 ```
 
-`Secondary Site Header` should be passed `selected` props to determine which menu item should be shown by default. Props must equal one of the following:
+`Secondary Header` should be passed `selected` props to determine which menu item should be shown by default. Props must equal one of the following:
 - jwplayer
 - jwplatform
 - android
@@ -112,7 +112,7 @@ For example:
 
 For example:
 ```
-<SiteSecondaryHeader selected="devtools" />
+<SecondaryHeader selected="devtools" />
 ```
 
 ##### Jekyll & Grunt
@@ -126,7 +126,7 @@ Simply add a step to your `grunt-copy` task to pull your components into your `_
   flatten: true
 }
 ```
-**Note:** You'll also need to reference the `components.js` file in order for the menus and functionality to work.
+**Note:** You'll also need to reference the `components.js` file in order for the dropdown menu functionality to work.
 
 ## Contributing to Hook Source Code
 
@@ -138,7 +138,7 @@ grunt
 ```
 This will automatically watch and update the CSS + icon sprites as you develop.
 
-**Note:** If you're making changes to `Site Header`, `Site Secondary Header` or `Site Footer`, be sure to update both HTML and JSX versions.
+**Note:** If you're making changes to `Site Header`, `Secondary Header` or `Site Footer`, be sure to update both HTML and JSX versions.
 
 #### Adding a New Stylesheet
 1. Add your LESS stylesheet to the `styles` folder
