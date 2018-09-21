@@ -23,6 +23,7 @@
 
 .product-hero h1 {
   color: @white;
+  margin-bottom: 20px;
 }
 
 .product-hero p {
@@ -48,23 +49,32 @@
   }
 }
 
-span {
-  color: white;
-  font-size: 13px;
-  font-weight: 600;
-  margin-right: 10px;
+.icon-size-test {
+  h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: @open-sans-semibold;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: @open-sans-semibold;
+    margin-bottom: 20px;
+  }
+
+  .jw-icon {
+    margin-right: 10px;
+    fill: white;
+  }
+
+  .row {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
 }
 
-svg {
-  margin-right: 8px;
-  fill: white;
-}
-
-.row {
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-}
 
 
 @media (min-width: 600px) {
