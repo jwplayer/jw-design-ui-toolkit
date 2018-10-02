@@ -9,20 +9,19 @@ module.exports = function (grunt) {
   };
 
   config.clean =  {
-    all: ['styles/hook.css', 'styles/hook.min.css', 'icons/sprites'],
-    nonMinified: 'styles/hook.css'
+    all: ['styles/build.css', 'styles/build.min.css', 'icons/sprites']
   };
 
   config.less = {
     build: {
-      files: { 'styles/hook.css' : 'styles/hook.less' }
+      files: { 'styles/build.css' : 'styles/build.less' }
     }
   };
 
   config.cssmin = {
     build: {
       options: { keepSpecialComments: 0 },
-      files: { 'styles/hook.min.css': 'styles/hook.css' }
+      files: { 'styles/build.min.css': 'styles/build.css' }
     }
   };
 
@@ -67,7 +66,6 @@ module.exports = function (grunt) {
       'copy',
       'less',
       'cssmin',
-      'clean:nonMinified',
       'watch'
     ];
 
