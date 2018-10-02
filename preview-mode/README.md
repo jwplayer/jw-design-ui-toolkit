@@ -1,4 +1,4 @@
-# Hook UI Preview Mode
+# Component Preview Mode
 Here you can preview any UI changes made to the global components. Preview mode will watch everything in the `components` and `styles` folders and rebuild as you make changes, but it **_does not hot reload_** the browser and will require a page refresh.
 
 ## Running Preview
