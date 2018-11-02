@@ -1223,6 +1223,7 @@ a.btn:hover {
 }
 .site-secondary-header-container a:hover {
   background-color: #FFFFFF;
+  border-bottom: 1px solid #D9DDE6;
 }
 .site-secondary-header-container .site-secondary-header-dropdown-link {
   display: none;
@@ -1244,6 +1245,7 @@ a.btn:hover {
 }
 .site-secondary-header-dropdown a:hover {
   background-color: #FFFFFF;
+  border-bottom: none;
 }
 .site-secondary-header-dropdown .is-selected {
   color: #000000;
