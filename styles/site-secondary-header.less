@@ -1,10 +1,10 @@
 @site-secondary-header-height: 56px;
 
 .site-secondary-header {
-  background: @jw-charcoal;
+  background: @jw-white;
   height: @site-secondary-header-height;
   font-family: @open-sans;
-  border-bottom: 1px solid mix(@black,@jw-charcoal,50%);
+  border-bottom: 1px solid @jw-gray;
 
   &-container {
     display: flex;
@@ -17,7 +17,7 @@
       width: 100%;
 
       &:hover {
-        background-color: fade(@black,50%);
+        background-color: @white;
       }
     }
     .site-secondary-header-dropdown-link {
@@ -33,16 +33,17 @@
     overflow: hidden;
     position: relative;
     z-index: 2;
-    border-right: 1px solid @black;
-    background-color: @jw-charcoal;
-    border-bottom: 1px solid mix(@black,@jw-charcoal,50%);
+    border-right: 1px solid @jw-gray;
+    border-left: 1px solid @jw-gray;
+    background-color: @jw-white;
+    border-bottom: 1px solid @jw-gray;
     margin-bottom: -1px;
 
     a:hover {
-      background-color: fade(@black,50%);
+      background-color: @white;
     }
     .is-selected {
-      color: white;
+      color: @black;
       display: block;
     }
 
@@ -51,7 +52,7 @@
     }
   }
   a {
-    color: white;
+    color: @black;
     font-size: 15px;
     font-weight: @open-sans-semibold;
     line-height: 55px;
@@ -60,7 +61,7 @@
     text-decoration: none;
 
     &.site-secondary-header-dropdown-arrow {
-      background-image: url('//icons.jwplayer.com/icons/white/expand.svg');
+      background-image: url('//icons.jwplayer.com/icons/black/expand.svg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: 12px;
@@ -93,7 +94,7 @@
   .site-secondary-header-container > a {
     display: block;
     text-align: center;
-    border-right: 1px solid @black;
+    border-right: 1px solid @jw-gray;
   }
   .site-secondary-header-group {
     flex: 2;
@@ -106,7 +107,7 @@
   .site-secondary-header a::before,
   .site-secondary-header-dropdown a::after,
   .site-secondary-header-dropdown.is-open::before {
-    background-color: @jw-charcoal;
+    background-color: @white;
     content: '';
     height: 100%;
     left: 0;

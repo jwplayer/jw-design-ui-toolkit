@@ -1206,10 +1206,10 @@ a.btn:hover {
   }
 }
 .site-secondary-header {
-  background: #252525;
+  background: #F2F5F9;
   height: 56px;
   font-family: 'Open Sans', sans-serif;
-  border-bottom: 1px solid #131313;
+  border-bottom: 1px solid #D9DDE6;
 }
 .site-secondary-header-container {
   display: flex;
@@ -1222,7 +1222,7 @@ a.btn:hover {
   width: 100%;
 }
 .site-secondary-header-container a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #FFFFFF;
 }
 .site-secondary-header-container .site-secondary-header-dropdown-link {
   display: none;
@@ -1236,23 +1236,24 @@ a.btn:hover {
   overflow: hidden;
   position: relative;
   z-index: 2;
-  border-right: 1px solid #000000;
-  background-color: #252525;
-  border-bottom: 1px solid #131313;
+  border-right: 1px solid #D9DDE6;
+  border-left: 1px solid #D9DDE6;
+  background-color: #F2F5F9;
+  border-bottom: 1px solid #D9DDE6;
   margin-bottom: -1px;
 }
 .site-secondary-header-dropdown a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #FFFFFF;
 }
 .site-secondary-header-dropdown .is-selected {
-  color: white;
+  color: #000000;
   display: block;
 }
 .site-secondary-header-dropdown.is-open .site-secondary-header-dropdown-link {
   display: block;
 }
 .site-secondary-header a {
-  color: white;
+  color: #000000;
   font-size: 15px;
   font-weight: 600;
   line-height: 55px;
@@ -1261,7 +1262,7 @@ a.btn:hover {
   text-decoration: none;
 }
 .site-secondary-header a.site-secondary-header-dropdown-arrow {
-  background-image: url('//icons.jwplayer.com/icons/white/expand.svg');
+  background-image: url('//icons.jwplayer.com/icons/black/expand.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 12px;
@@ -1290,7 +1291,7 @@ a.btn:hover {
   .site-secondary-header-container > a {
     display: block;
     text-align: center;
-    border-right: 1px solid #000000;
+    border-right: 1px solid #D9DDE6;
   }
   .site-secondary-header-group {
     flex: 2;
@@ -1303,7 +1304,7 @@ a.btn:hover {
   .site-secondary-header a::before,
   .site-secondary-header-dropdown a::after,
   .site-secondary-header-dropdown.is-open::before {
-    background-color: #252525;
+    background-color: #FFFFFF;
     content: '';
     height: 100%;
     left: 0;
