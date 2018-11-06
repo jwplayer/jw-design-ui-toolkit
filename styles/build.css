@@ -517,27 +517,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.jw-icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-}
-.jw-icon.jw-icon-xs {
-  width: 8px;
-  height: 8px;
-}
-.jw-icon.jw-icon-sm {
-  width: 16px;
-  height: 16px;
-}
-.jw-icon.jw-icon-med {
-  width: 24px;
-  height: 24px;
-}
-.jw-icon.jw-icon-lg {
-  width: 32px;
-  height: 32px;
-}
 label {
   color: #fff;
   display: inline-block;
