@@ -63,20 +63,19 @@
     text-decoration: none;
 
     &.site-secondary-header-dropdown-arrow {
-      background-image: url('//icons.jwplayer.com/icons/black/expand.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 12px;
-      content: '';
       display: block;
       height: @site-secondary-header-height;
-      line-height: @site-secondary-header-height;
-      padding: 0;
       position: absolute;
       right: 0;
-      top: 0;
       width: @site-secondary-header-height;
       z-index: 1;
+      svg {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 18px;
+        left: 18px;
+      }
     }
   }
 }
