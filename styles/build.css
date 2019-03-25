@@ -559,7 +559,7 @@ select.invalid {
   width: 100%;
 }
 select {
-  background-image: url('//icons.jwplayer.com/icons/black/expand.svg');
+  background-image: url('../icons/dashboard/expand.svg');
   background-position: right 20px center;
   background-repeat: no-repeat;
   background-size: 12px;
@@ -980,11 +980,13 @@ a.btn:hover {
   font-size: 13px;
   font-weight: 600;
 }
-.site-header .menu img.search-icon {
+.site-header .menu svg.search-icon {
   margin-top: -2px;
   opacity: 0.8;
+  width: 18px;
+  height: 18px;
 }
-.site-header .menu img.search-icon:hover {
+.site-header .menu svg.search-icon:hover {
   opacity: 1;
 }
 .site-header .menu .menu {
@@ -1243,20 +1245,19 @@ a.btn:hover {
   text-decoration: none;
 }
 .site-secondary-header a.site-secondary-header-dropdown-arrow {
-  background-image: url('//icons.jwplayer.com/icons/black/expand.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 12px;
-  content: '';
   display: block;
   height: 56px;
-  line-height: 56px;
-  padding: 0;
   position: absolute;
   right: 0;
-  top: 0;
   width: 56px;
   z-index: 1;
+}
+.site-secondary-header a.site-secondary-header-dropdown-arrow svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 18px;
+  left: 18px;
 }
 @media (min-width: 900px) {
   .site-secondary-header-container {
